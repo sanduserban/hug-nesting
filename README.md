@@ -5,12 +5,12 @@ Invoke example:
 cat input.json | python nest.py currency country city
 
 ### TASK 2
-1. *pip install -r requirements.txt*
+1. `pip install -r requirements.txt`
 
-2. *hug -f server.py*
+2. `hug -f server.py`
 
-3. *cat input.json | http --auth serban:gron-drunt-crisp POST :8000/restructure keys=='currency,country,city'*\
-  OR cat huge.json | http --auth serban:gron-drunt-crisp POST :8000/restructure keys=='currency,country,city'
+3. `cat input.json | http --auth serban:gron-drunt-crisp POST :8000/restructure keys=='currency,country,city'`\
+  OR `cat huge.json | http --auth serban:gron-drunt-crisp POST :8000/restructure keys=='currency,country,city'`
 
 
 ##### CURL TESTING:
