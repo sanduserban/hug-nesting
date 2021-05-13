@@ -13,8 +13,9 @@ cat input.json | python nest.py currency country city
   OR cat huge.json | http --auth serban:gron-drunt-crisp POST :8000/restructure keys=='currency,country,city'
 
 
-CURL TESTING:
+##### CURL TESTING:
 
+```
 curl --location --request POST 'http://127.0.0.1:8000/restructure?keys=currency,country,city' \
 --header 'Authorization: Basic c2VyYmFuOmdyb24tZHJ1bnQtY3Jpc3A==' \
 --header 'Content-Type: application/json' \
@@ -56,3 +57,4 @@ curl --location --request POST 'http://127.0.0.1:8000/restructure?keys=currency,
     "amount": 10.9
   }
 ]'
+```
