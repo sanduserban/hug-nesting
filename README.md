@@ -2,7 +2,7 @@
 ### TASK 1
 
 Invoke example:
-cat input.json | python nest.py currency country city
+`cat input.json | python nest.py currency country city`
 
 ### TASK 2
 1. `pip install -r requirements.txt`
