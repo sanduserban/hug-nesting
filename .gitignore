@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+*.pyc
+development.env
+.vscode/
+__pycache__/
+src/media/
+src/*egg-info*
+.devcontainer/
+.coverage
+src/.coverage
+.pytest_cache
+htmlcov
+.python-version
