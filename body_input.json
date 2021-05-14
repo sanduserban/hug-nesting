@@ -1,30 +1,4 @@
-# Programming:
-## TASK 1
-
-Invoke example:
-`cat input.json | python nest.py currency country city`
-
-#### Unittest
-Testing command:
-`pytest src/tests`
-
-
-## TASK 2
-1. `pip install -r requirements.txt`
-
-2. `hug -f server.py`
-
-3. `cat body_input.json | http --auth serban:gron-drunt-crisp POST :8000/restructure`\
-  OR `cat huge.json | http --auth serban:gron-drunt-crisp POST :8000/restructure`
-
-
-##### CURL TESTING:
-
-```
-curl --location --request POST 'http://127.0.0.1:8000/restructure' \
---header 'Authorization: Basic c2VyYmFuOmdyb24tZHJ1bnQtY3Jpc3A==' \
---header 'Content-Type: application/json' \
---data-raw '{
+{
     "json": [
       {
         "country": "US",
@@ -64,5 +38,4 @@ curl --location --request POST 'http://127.0.0.1:8000/restructure' \
       }
     ],
     "arguments": ["currency", "country", "city"]
-}'
-```
+}
