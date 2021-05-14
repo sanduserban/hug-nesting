@@ -74,4 +74,4 @@ if __name__ == '__main__':
     except AlreadyPassedArgument:
         sys.stderr.write('Duplicate arguments provided.')
 
-    sys.stderr.write(str(json.dumps(output)))
+    print(json.dumps(output), file=sys.stdout)
