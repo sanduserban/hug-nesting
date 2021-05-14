@@ -5,8 +5,9 @@ Invoke example:
 `cat input.json | python nest.py currency country city`
 
 #### Unittest
-Testing command:
-`pytest src/tests`
+Testing commands:
+`python -m unittest src.tests.test_restructure`
+`python -m unittest src.tests.test_validators`
 
 
 ## TASK 2
