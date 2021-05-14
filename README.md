@@ -18,6 +18,8 @@ Testing commands:
 3. `cat body_input.json | http --auth serban:gron-drunt-crisp POST :8000/restructure`\
   OR `cat huge.json | http --auth serban:gron-drunt-crisp POST :8000/restructure`
 
+###### MENTION
+This POST is not exactly non-idempotent, but i couldn't figure out a more RESTful way of implementing this
 
 ##### CURL TESTING:
 
