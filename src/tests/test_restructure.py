@@ -1,13 +1,10 @@
 import copy
 import unittest
 
-import hug
-import pytest
-
 from nest import rebuild_json
 
 
-class RestructureTest(unittest.TestCase):
+class TestRestructure(unittest.TestCase):
 
     body = [
         {
