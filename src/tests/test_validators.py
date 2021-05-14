@@ -1,4 +1,3 @@
-import pytest
 import unittest
 
 
@@ -7,13 +6,13 @@ from nest import validate_args, AlreadyPassedArgument, InvalidArgument, MissingA
 
 class TestValidators(unittest.TestCase):
     body = [
-            {
-                "country": "US",
-                "city": "Boston",
-                "currency": "USD",
-                "amount": 100
-            }
-        ]
+        {
+            "country": "US",
+            "city": "Boston",
+            "currency": "USD",
+            "amount": 100
+        }
+    ]
 
 
     def test_success(self):
@@ -21,26 +20,22 @@ class TestValidators(unittest.TestCase):
         validate_args(self.body[0].keys(), arguments)
         assert True
 
-
     def test_missing_arguments(self):
         arguments = None
-        with pytest.raises(MissingArguments):
+        with self.assertRaises(MissingArguments):
             validate_args(self.body[0].keys(), arguments)
-
 
     def test_already_passed_argument(self):
         arguments = ["currency", "country", "country"]
-        with pytest.raises(AlreadyPassedArgument):
+        with self.assertRaises(AlreadyPassedArgument):
             validate_args(self.body[0].keys(), arguments)
-
 
     def test_invalid_argument(self):
         arguments = ["city", "country", "curr"]
-        with pytest.raises(InvalidArgument):
+        with self.assertRaises(InvalidArgument):
             validate_args(self.body[0].keys(), arguments)
-
 
     def test_too_many_arguments(self):
         arguments = ["currency", "country", "city", "amount", "somearg"]
-        with pytest.raises(TooManyArguments):
+        with self.assertRaises(TooManyArguments):
             validate_args(self.body[0].keys(), arguments)
